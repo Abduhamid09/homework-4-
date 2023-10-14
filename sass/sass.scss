@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'work sans';
+    src: url(../font/work_sans/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Space mono';
+    src: url(../font/SpaceMono-Regular.ttf);
+}
+
+header {
+    background: var(--Background, #2B2B2B);
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-around;
+    align-items: center;
+
+    aside {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        ul {
+            display: flex;
+            gap: 20px;
+
+            a {
+                color: #FFF;
+                font-family: Work Sans;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+
+        button {
+            display: flex;
+            padding: 20px 30px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            color: #FFF;
+            font-family: Work Sans;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 20px;
+            background: var(--Call-to-Action, #A259FF);
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+}
+
+section {
+    display: flex;
+    gap: 60px;
+    background: var(--Background, #2B2B2B);
+
+    .text {
+
+        padding: 10.1% 0;
+
+        h1 {
+            color: var(--White, #FFF);
+            font-family: Work Sans;
+            font-size: 51px;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 460px;
+            padding-top: 20px;
+            color: var(--White, #FFF);
+            font-family: Work Sans;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .btn {
+            padding-top: 40px;
+            display: grid;
+            gap: 15px;
+
+            button {
+                display: flex;
+                width: 300px;
+                padding: 16px 20px;
+                align-items: center;
+                gap: 12px;
+                border-radius: 20px;
+                border: 1px solid var(--caption-label-text, #858584);
+                background: var(--Text, #FFF);
+                font-weight: 600;
+
+                &:last-child {
+                    border-radius: 20px;
+                    background: var(--Call-to-Action, #A259FF);
+                    color: #FFF;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: var(--Background---Secondary, #3B3B3B);
+    padding: 40px 10%;
+    display: grid;
+    justify-content: center;
+    .box {
+        border-bottom: 1px solid #858584;
+        display: flex;
+        justify-content: center;
+        max-width: 1049px;
+        padding: 0 0 30px;
+        .item {
+            padding-right: 84px;
+            p {
+                padding-top: 30px;
+                max-width: 238px;
+                color: #CCC;
+                font-family: Work Sans;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:nth-child(3) {
+                    padding-top: 20px;
+                }
+            }
+
+            img {
+                padding-top: 15px;
+            }
+
+            h1 {
+                color: #FFF;
+                font-family: Space Mono;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            .item_text {
+                font-family: Space mono;
+            }
+
+            ul {
+                display: grid;
+                gap: 20px;
+                padding-top: 25px;
+
+                a {
+                    color: #CCC;
+                    font-family: Work Sans;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+            }
+
+            input {
+                color: var(--Background, #2B2B2B);
+                font-family: Work Sans;
+                font-size: 16px;
+                font-weight: 400;
+                border-radius: 20px;
+                padding: 16px 20px;
+                background: var(--Text, #FFF);
+                border: none;
+            }
+
+            button {
+                color: #FFF;
+                text-align: center;
+                font-family: Work Sans;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 16px 50px;
+                border-radius: 20px;
+                background: var(--Call-to-Action, #A259FF);
+                border: none;
+                cursor: pointer;
+            }
+            &:nth-child(3){
+                padding: 0;
+            }
+            .btn{
+                padding-top: 20px;
+            }
+        }
+
+    }
+
+    p {
+        color: #CCC;
+        padding-top: 20px;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+    }
+
+}
+
+@media (max-width:1200px) {
+    section {
+        display: flex;
+        padding: 0 2%;
+
+        .text {
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                max-width: 325px;
+                font-size: 16px;
+            }
+        }
+
+    }
+    footer{
+        .box{
+            display: grid;
+            grid-template-columns: max-content;
+            gap: 30px;
+        }
+    }
+}
+
+@media(max-width: 990px) {
+    header {
+
+        aside {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+    }
+
+    section {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        img {
+            max-width: 397px;
+        }
+    }
+}
+
+@media (max-width: 447px) {
+    section {
+        img {
+            max-width: 375px;
+        }
+    }
+    footer{
+        .item{
+            .btn{
+                padding-top: 20px;
+                grid-template-columns: auto;
+                display: grid;
+                gap: 16px;
+            }
+        }
+    }
+}
